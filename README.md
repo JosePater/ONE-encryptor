@@ -23,5 +23,5 @@ La página debe contar con los siguientes elementos:
 ## Desarrollador por:
 
 ```
-Ing: José Luis Paternina Martínez.
+José Luis Paternina Martínez.
 ```
