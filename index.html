@@ -25,7 +25,6 @@
     <!-- Social Meta -->
     <meta property="og:title" content="Pater | Encriptador de texto">
     <meta property="og:description" content="Challenge ONE Principiante en Programación | Oracle Next Education">
-    <!-- <meta property="og:image" content="https://github.io/encryptor/..."> -->
     <meta property="og:image:width" content="400">
     <meta property="og:image:height" content="300">
 
@@ -45,8 +44,8 @@
             <div class="double-button">
                 <label for=""><span class="exclamation">&#33;</span> Solo letras minúsculas y sin acentos</label>
                 <div class="flex flex-button">
-                    <button type="button" class="button-blue">Cifrar</button>
-                    <button type="button" class="button-grey">Descifrar</button>
+                    <button type="button" onclick="encrypt()" class="button-blue">Cifrar</button>
+                    <button type="button" onclick="decrypt()" class="button-grey">Descifrar</button>
                 </div>
             </div>
         </div>
@@ -54,13 +53,16 @@
         <div class="flex translation not-found padding-result">
             <img src="src/img/not-found.png" alt="Not Found">
             <p class="bold empty">Ningún mensaje fue encontrado</p>
-            <p class="empty-legend">Ingresa el texto que deseas encriptar o desencriptar.</p>
+            <p class="empty-legend">Digita el texto que deseas encriptar o desencriptar.</p>
         </div>
         <div class="flex translation text-found display-none padding-result">
             <textarea class="inputCopy" name="" id="" placeholder="Resultado" disabled></textarea>
-            <button type="button" class="button-grey">Copiar</button>
+            <button type="button" onclick="copy()" class="button-grey">Copiar</button>
         </div>
+        
     </main>
+
+    <script src="./src/js/app.js"></script>
 
 
 </body>
