@@ -89,9 +89,9 @@ textarea {
   resize: none;
   height: 65%;
   
-  border: 2px solid #3498db; /* Borde con color azul */
+  border: 2px solid #0dcaf0; /* Borde con color */
   border-radius: 10px; /* Borde redondeado */
-  box-shadow: 0 0 20px rgba(52, 152, 219, 0.8); /* Sombra azul más intensa */
+  box-shadow: 0 0 20px rgba(4, 79, 129, 0.8); /* Sombra azul más intensa */
   
 }
 
@@ -164,13 +164,6 @@ button {
   }
 }
 
-/* Prueba */
-/* @media (max-width: 1077px) {
-  .padding-result {
-    display: flex;
-  }
-} */
-
 /* Translation */
 .translation {
   z-index: 10;
@@ -231,3 +224,95 @@ footer {
 .icons i:hover {
   color: blue;
 }
+
+/* ___________ Footer ___________ */
+footer{    
+    background: #111;
+    height: auto;
+    width: 100%;
+    font-family: Monospace;
+    padding-top: 40px;
+    color: #fff;
+  }
+  
+  
+  
+  .footer-content{
+    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+  }
+  
+  .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+  }
+  
+  .footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  
+  .footer-content img{
+    width: 150px;
+  }
+  
+  .socials{
+    list-style: none;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+  }
+  
+  .socials li{
+    margin: 0 10px;
+  }
+  
+  .socials a{
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .socials a i{
+    font-size: 2.5rem;
+    transition: color .4s ease;
+    transition: 1s;
+  }
+  
+  .socials a:hover i{
+    transform: scale(1.5);
+    transition: 0.5s;
+    color: #0dcaf0;
+  }
+  
+  .footer-bottom{
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+  }
+  
+  .footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+  }
+  
+  .footer-bottom span a{
+    text-decoration: none;
+    color: #fff;
+  }
