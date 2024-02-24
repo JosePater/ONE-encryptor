@@ -12,6 +12,27 @@ html {
   box-sizing: inherit;
 }
 
+/* __________ Header (logos) __________ */
+header {
+  background-color: #ecebf3;
+  color: #fff;
+  padding:  0 15px;
+  text-align: center;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+}
+
+#logo-one {
+  width: 130px;
+}
+
+/* Body */
+
 body {
   background-color: #f3f5fc;
   background-repeat: no-repeat;
@@ -58,10 +79,6 @@ body {
 }
 
 /* Main */
-.logo {
-  width: 2.5rem;
-  height: auto;
-}
 
 main {
   height: 90vh;
@@ -149,7 +166,7 @@ button {
     grid-template-columns: 2fr 1fr;
   }
   .logo {
-    width: 3.5rem;
+    width: 6rem;
   }
   .user {
     flex: 2;
