@@ -99,7 +99,7 @@ main {
 textarea {
   text-transform: lowercase;
   font-size: 1.75rem;
-  width: 90%;
+  width: 100%;
   display: block;
   background-color: unset;
   margin: 1.5rem auto;
@@ -250,6 +250,18 @@ button {
   .not-found img {
     width: 75%;
     display: unset;
+  }
+  textarea {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1080px) {
+  textarea {
+    height: 400px;
+  }
+  footer {
+    margin-top: 600px;
   }
 }
 
