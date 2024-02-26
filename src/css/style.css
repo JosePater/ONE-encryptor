@@ -255,9 +255,16 @@ button {
   textarea {
     height: 500px;
   }
+  footer {
+    margin-top: 200px;
+  }
 }
 
 @media (max-width: 1080px) {
+  .not-found img {
+    width: 40%;
+    display: unset;
+  }
   textarea {
     height: 400px;
   }
