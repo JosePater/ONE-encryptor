@@ -35,7 +35,7 @@ header {
 /* Body */
 
 body {
-  background-color: #f3f5fc;
+  background-color: #292B38;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -97,6 +97,7 @@ main {
 }
 
 textarea {
+  color: #fff;
   text-transform: lowercase;
   font-size: 1.75rem;
   width: 100%;
@@ -108,7 +109,7 @@ textarea {
   height: 65%;
   border: 2px solid #0dcaf0; /* Borde con color */
   border-radius: 10px; /* Borde redondeado */
-  box-shadow: 0 0 20px rgba(4, 79, 129, 0.8); /* Sombra azul más intensa */
+  box-shadow: 15px 15px 15px rgba(4, 79, 129, 0.8); /* Sombra azul más intensa */
 }
 
 textarea:focus {
@@ -122,7 +123,7 @@ textarea::placeholder {
 
 *:disabled {
   background-color: transparent;
-  color: #000;
+  color: #85b9f8;
   cursor: text;
 }
 
@@ -161,11 +162,11 @@ button {
 }
 
 .btn-1 {
-  background-color: #eb3838;
+  background-color: #ee4949;
 }
 
 .btn-2 {
-  background-color: #48fc30;
+  background-color: #6fe95f;
 }
 
 .btn-3 {
@@ -188,7 +189,7 @@ button {
 }
 
 .btn:hover {
-  box-shadow: -15px 10px 10px rgb(116, 115, 119);
+  box-shadow: -15px 10px 10px rgb(12, 12, 12);
 }
 
 
@@ -220,10 +221,10 @@ button {
   z-index: 10;
   flex-direction: column;
   border-radius: 3.2rem;
-  background-color: #fff;
 }
 
 .not-found {
+  color: #fff;
   gap: 1.6rem;
   justify-content: center;
   align-items: center;
