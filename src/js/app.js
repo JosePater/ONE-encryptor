@@ -7,61 +7,83 @@ const notFound = document.querySelector('.not-found');
 let textUser;
 
 function encrypt() {
+  // If there isn't text
+  if (encryptText.value.trim() == '') {
+    myAlert('center', 'error', `No hay mensaje para encriptar`, 1500);
+    return true;
+  }
+
   if (encryptText.value) {
+    textUser = encryptText.value
+      .replaceAll('e', 'enter')
+      .replaceAll('i', 'imes')
+      .replaceAll('a', 'ai')
+      .replaceAll('u', 'ufat')
+      .replaceAll('o', 'ober');
+
+    if (compareTexts(encryptText.value, textUser)) {
+      myAlert(
+        'center',
+        'question',
+        'Su mensaje no válido para encriptar!',
+        1500
+      );
+      return;
+    }
     myAlert('center', 'success', '¡¡¡Encriptado!!!', 1500);
     setTimeout(() => {
-      textUser = encryptText.value
-        .replaceAll('e', 'enter')
-        .replaceAll('i', 'imes')
-        .replaceAll('a', 'ai')
-        .replaceAll('u', 'ufat')
-        .replaceAll('o', 'ober');
-
-      copyText.value = textUser;
-      encryptText.value = '';
-      textFound.classList.remove('display-none');
-      notFound.classList.add('display-none');
+      showResult();
     }, 1500);
-  } else {
-    myAlert('center', 'error', 'No hay mensaje para encriptar', 1500);
-    textFound.classList.add('display-none');
-    notFound.classList.remove('display-none');
   }
 }
 
 function decrypt() {
-  myAlert('center', 'success', '¡¡¡Desencriptado!!!', 1500);
-  if (encryptText.value) {
-    setTimeout(() => {
-      textUser = encryptText.value
-        .replaceAll('ai', 'a')
-        .replaceAll('imes', 'i')
-        .replaceAll('enter', 'e')
-        .replaceAll('ober', 'o')
-        .replaceAll('ufat', 'u');
+  // If there isn't text
+  if (encryptText.value.trim() == '' && !copyText.value) {
+    myAlert('center', 'error', `No hay mensaje para desencriptar`, 1500);
+    return;
+  }
 
-      copyText.value = textUser;
-      encryptText.value = '';
-      textFound.classList.remove('display-none');
-      notFound.classList.add('display-none');
+  // textarea 1
+  if (encryptText.value) {
+    textUser = _decrypt(encryptText.value);
+
+    if (compareTexts(encryptText.value, textUser)) return;
+    myAlert('center', 'success', '¡¡¡Desencriptado!!!', 1500);
+    setTimeout(() => {
+      showResult();
     }, 1500);
-  } else {
-    myAlert('center', 'error', 'No hay mensaje para desencriptar', 1500);
-    textFound.classList.add('display-none');
-    notFound.classList.remove('display-none');
+
+    // textarea 2
+  } else if (copyText.value) {
+    textUser = _decrypt(copyText.value);
+
+    if (compareTexts(copyText.value, textUser)) return;
+    myAlert('center', 'success', '¡¡¡Desencriptado!!!', 1500);
+    setTimeout(() => {
+      showResult();
+    }, 1500);
   }
 }
 
+// input text with output text
+function compareTexts(input, output) {
+  if (input == output) {
+    myAlert('center', 'question', 'No es un mensaje encriptado!', 1500);
+    return true;
+  }
+}
+
+// Copiar texto textarea 2
 function copy() {
   copyText.select();
   copyText.setSelectionRange(0, 99999); // Para móvile
-
   // Copia el texto
   navigator.clipboard.writeText(copyText.value);
-  // Alert
   myAlert('center', 'success', 'Mensaje copiado!');
 }
 
+// Alert
 function myAlert(position, type, title, time = 1300) {
   Swal.fire({
     position: position,
@@ -70,4 +92,21 @@ function myAlert(position, type, title, time = 1300) {
     showConfirmButton: false,
     timer: time,
   });
+}
+
+// Desencriptar
+function _decrypt(text) {
+  return text
+    .replaceAll('ai', 'a')
+    .replaceAll('imes', 'i')
+    .replaceAll('enter', 'e')
+    .replaceAll('ober', 'o')
+    .replaceAll('ufat', 'u');
+}
+
+function showResult() {
+  copyText.value = textUser;
+  encryptText.value = '';
+  textFound.classList.remove('display-none');
+  notFound.classList.add('display-none');
 }
