@@ -35,12 +35,10 @@
 <body>
     <header>
         <div class="logo">
-            <a href="/">
-              <img
-                src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg"
-                alt="aluraespanhol"
-              />
-            </a>
+            <img
+            src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg"
+            alt="aluraespanhol"
+            />
         </div>
   
         <div class="logo">
@@ -62,8 +60,12 @@
             <div class="double-button">
                 <label for=""><span class="exclamation">&#33;</span> Solo letras minúsculas y sin acentos</label>
                 <div class="flex flex-button">
-                    <button type="button" onclick="encrypt()" class="button-blue">Cifrar</button>
-                    <button type="button" onclick="decrypt()" class="button-grey">Descifrar</button>
+                    <button class="btn btn-1" onclick="encrypt()">
+                        <i class="fas fa-lock"></i><span class="text"> Cifrar</span>
+                    </button>
+                    <button class="btn btn-2" onclick="decrypt()">
+                        <i class="fas fa-unlock"></i><span class="text">.Descifrar</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -75,7 +77,10 @@
         </div>
         <div class="flex translation text-found display-none padding-result">
             <textarea class="inputCopy" name="" id="" placeholder="Resultado" disabled></textarea>
-            <button type="button" onclick="copy()" class="button-grey">Copiar</button>
+            <button class="btn btn-3" onclick="copy()">
+                <i class="fas fa-copy"></i><span class="text"> Copiar</span>
+            </button>
+            
         </div>
         
     </main>
