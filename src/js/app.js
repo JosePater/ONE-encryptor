@@ -26,7 +26,7 @@ function encrypt() {
       myAlert(
         'center',
         'question',
-        'Su mensaje no válido para encriptar!',
+        'Mensaje no válido para encriptar!',
         1500
       );
       return;

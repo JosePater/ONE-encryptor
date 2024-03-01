@@ -255,6 +255,9 @@ button {
   textarea {
     height: 380px;
   }
+  .btn-3 {
+    margin-top: 3rem;
+  }
   footer {
     margin-top: 200px;
   }
