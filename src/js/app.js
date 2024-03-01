@@ -14,7 +14,8 @@ function encrypt() {
   }
 
   if (encryptText.value) {
-    textUser = encryptText.value
+    // Texto en minúsculas
+    textUser = encryptText.value.toLowerCase()
       .replaceAll('e', 'enter')
       .replaceAll('i', 'imes')
       .replaceAll('a', 'ai')
@@ -46,7 +47,7 @@ function decrypt() {
 
   // textarea 1
   if (encryptText.value) {
-    textUser = _decrypt(encryptText.value);
+    textUser = _decrypt(encryptText.value.toLowerCase()); // minúsculas
 
     if (compareTexts(encryptText.value, textUser)) return;
     myAlert('center', 'success', '¡¡¡Desencriptado!!!', 1500);
