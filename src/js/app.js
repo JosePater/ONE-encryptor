@@ -69,7 +69,8 @@ function decrypt() {
 
 // input text with output text
 function compareTexts(input, output) {
-  if (input == output) {
+  // comparaciones de textos en minúsculas
+  if (input.toLowerCase() == output) {
     myAlert('center', 'question', 'No es un mensaje encriptado!', 1500);
     return true;
   }
@@ -110,4 +111,10 @@ function showResult() {
   encryptText.value = '';
   textFound.classList.remove('display-none');
   notFound.classList.add('display-none');
+  // Screen max 1080
+  if (window.innerWidth < 1080) {
+    setTimeout(() => {
+      textFound.scrollIntoView({ behavior: 'smooth' });   
+    }, 300);
+  }
 }
